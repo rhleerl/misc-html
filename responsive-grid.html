@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		html, body {
+			height: 100%;
+		}
+
+		.container {
+			height: 100%;
+			border: 1px solid black;
+			margin: 0 auto;
+		}
+
+		/* max container width is 996px */
+		@media only screen and (min-width: 1000px) {
+			.container {
+				width: 1000px;
+			}
+		}
+
+		.panel {
+			margin: 0;
+			padding: 5px 10px;
+			/*border: 1px solid black;*/
+			/*margin: 2px;*/
+			height: 300px;
+			width: 25%;
+			display: inline-block;
+
+			/* 
+				Includes border and padding within the width 
+				Reference: 
+				http://stackoverflow.com/questions/11070071/css-width-in-percentage-and-borders
+			*/
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+			
+		}
+
+		@media only screen and (max-width: 1000px) {
+			.panel {
+				width: 33.33333%;
+			}
+		}
+
+		@media only screen and (max-width: 656px) {
+			.panel {
+				width: 50%;
+			}
+		}
+
+		@media only screen and (max-width: 500px) {
+			.panel {
+				width: 100%;
+			}
+		}
+
+
+		.panel-content {
+			border: 1px solid black;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<!-- 
+			Spacing in the html adds space on the rendered html 
+			http://stackoverflow.com/questions/6871996/css-two-inline-block-width-50-elements-dont-stack
+		-->
+		<div class="panel">
+			<div class="panel-content">
+				<span>This is panel 1</span>
+			</div>
+		</div><!-- 
+		--><div class="panel">
+			<div class="panel-content">
+				<span>This is panel 2</span>
+			</div>
+		</div><!--
+		--><div class="panel">
+			<div class="panel-content">
+				<span>This is panel 3</span>
+			</div>
+		</div><!--
+		--><div class="panel">
+			<div class="panel-content">
+				<span>This is panel 4</span>
+			</div>
+		</div><!--
+		--><div class="panel">
+			<div class="panel-content">
+				<span>This is panel 5</span>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+</html>
